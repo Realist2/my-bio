@@ -1,0 +1,207 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Ensures the website adjusts to different screen sizes. -->
+
+    <meta name="description" content="My student portfolio and academic website.">
+    <!-- Provides a short description of the webpage. -->
+
+    <title>Home | Student Portfolio</title>
+    <!-- Sets the title displayed in the browser tab. -->
+
+    <link rel="stylesheet" href="style.css">
+    <!-- Connects this HTML page to our external CSS file. -->
+</head>
+
+<body>
+    <!-- Contains all the visible content on the webpage. -->
+
+    <header class="site-header">
+        <!-- Creates the top section containing the logo and navigation. -->
+
+        <div class="container nav-container">
+            <!-- Groups the logo and navigation into one layout container. -->
+
+            <a href="index.html" class="logo">
+                <!-- Makes the website logo a clickable link to Home. -->
+                MyPortfolio
+            </a>
+
+            <nav aria-label="Main navigation">
+                <!-- Groups links used to navigate between website pages. -->
+
+                <a href="index.html" class="active">Home</a>
+                <!-- Links to the homepage and marks it as the current page. -->
+
+                <a href="about.html">About Me</a>
+                <!-- Links to the About Me page. -->
+
+                <a href="projects.html">Projects</a>
+                <!-- Links to the Projects page. -->
+
+                <a href="planner.html">Academic Planner</a>
+                <!-- Links to the Academic Planner page. -->
+
+                <a href="contact.html">Contact</a>
+                <!-- Links to the Contact page. -->
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Contains the primary content of the homepage. -->
+
+        <section class="hero">
+            <!-- Introduces the student to visitors. -->
+
+            <div class="container hero-content">
+                <!-- Keeps the introduction within a consistent page width. -->
+
+                <div class="hero-text">
+                    <!-- Groups the introduction text and buttons. -->
+
+                    <p class="eyebrow">WELCOME TO MY PORTFOLIO</p>
+                    <!-- Displays a small introductory label. -->
+
+                    <h1>Hello, I'm Olojuola</h1>
+                    <!-- Main heading: replace Your Name with your name. -->
+
+                    <h2>A University Student of MIVA Open University</h2>
+                    <!-- Describes your student profile and career interest. -->
+
+                    <p>
+                        Welcome to my personal portfolio! This website
+                        showcases my educational background, technical
+                        skills, projects and academic activities.
+                    </p>
+                    <!-- Gives visitors a short introduction to the website. -->
+
+                    <div class="hero-buttons">
+                        <!-- Groups the two action links together. -->
+
+                        <a href="about.html" class="btn btn-primary">
+                            Discover More
+                        </a>
+                        <!-- Takes visitors to your About Me page. -->
+
+                        <a href="projects.html" class="btn btn-outline">
+                            View My Projects
+                        </a>
+                        <!-- Takes visitors to your Projects page. -->
+                    </div>
+                </div>
+
+                <div class="hero-image">
+                    <!-- Creates the area for your profile photograph. -->
+
+                    <img
+                        src="images/profile.jpg"
+                        alt="Portrait of Your Name"
+                        width="320"
+                        height="320"
+                    >
+                    <!-- Displays your photograph.
+                         Replace the file with your own image.
+                         The alt text describes the image. -->
+                </div>
+            </div>
+        </section>
+
+        <section class="intro-section">
+            <!-- Provides a brief biography on the homepage. -->
+
+            <div class="container">
+                <!-- Aligns the section with the rest of the website. -->
+
+                <p class="eyebrow">A LITTLE ABOUT ME</p>
+                <!-- Introduces the biography section. -->
+
+                <h2>My Academic Journey</h2>
+                <!-- Gives the biography a clear heading. -->
+
+                <p>
+                    I am a university student developing my knowledge
+                    of computing and web technologies. I enjoy learning
+                    how websites work and using technology to solve
+                    problems. My goal is to improve my programming skills
+                    and build useful digital solutions.
+                </p>
+                <!-- Replace this sample biography with your own details. -->
+
+                <a href="about.html" class="text-link">
+                    Read More About Me &rarr;
+                </a>
+                <!-- Links to the full About Me page. -->
+            </div>
+        </section>
+
+        <section class="features-section">
+            <!-- Introduces the main areas visitors can explore. -->
+
+            <div class="container">
+                <h2>Explore My Website</h2>
+                <!-- Heading for the website feature cards. -->
+
+                <div class="feature-grid">
+                    <!-- CSS Grid will arrange these cards in columns. -->
+
+                    <article class="feature-card">
+                        <!-- Represents the Projects feature. -->
+
+                        <h3>My Projects</h3>
+                        <p>
+                            Explore my practice projects and the
+                            skills I am developing.
+                        </p>
+                        <a href="projects.html">Explore Projects &rarr;</a>
+                    </article>
+
+                    <article class="feature-card">
+                        <!-- Represents the Academic Planner feature. -->
+
+                        <h3>Academic Planner</h3>
+                        <p>
+                            Organize assignments, study activities
+                            and academic tasks.
+                        </p>
+                        <a href="planner.html">Open Planner &rarr;</a>
+                    </article>
+
+                    <article class="feature-card">
+                        <!-- Represents the Contact feature. -->
+
+                        <h3>Get in Touch</h3>
+                        <p>
+                            Visit my contact page to send a message
+                            through the contact form.
+                        </p>
+                        <a href="contact.html">Contact Me &rarr;</a>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <!-- Creates the bottom section of the webpage. -->
+
+        <div class="container">
+            <p>
+                &copy; 2026 Your Name. All rights reserved.
+            </p>
+            <!-- Displays a copyright notice. Replace Your Name. -->
+
+        </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+    <!-- Loads JavaScript after the HTML has been parsed.
+         We will add interactive features in later steps. -->
+
+</body>
+</html>

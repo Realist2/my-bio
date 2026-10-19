@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Ensures the website adjusts to different screen sizes. -->
+
+    <title>Academic Planner | Student Portfolio</title>
+    <!-- Title displayed in the browser tab -->
+
+    <link rel="stylesheet" href="style.css" />
+    <!-- Connects this page to the shared external CSS file -->
+  </head>
+
+  <!-- Begins the body of the Academic Planner webpage. -->
+  <body>
+    <!-- Creates the header section containing the website logo and navigation links. -->
+    <header class="site-header">
+      <!-- Keeps the logo and navigation links aligned within the main container. -->
+      <div class="container nav-container">
+        <!-- Links the website logo to the homepage. -->
+        <a href="index.html" class="logo"> My Student Portfolio </a>
+
+        <!-- Defines the main navigation menu for moving between website pages. -->
+        <nav aria-label="Main navigation">
+          <!-- Links to the homepage. -->
+          <a href="index.html">Home</a>
+
+          <!-- Links to the About Me page. -->
+          <a href="about.html">About Me</a>
+
+          <!-- Links to the Projects page. -->
+          <a href="projects.html">Projects</a>
+
+          <!-- Links to the Academic Planner page and marks it as the current page. -->
+          <a href="planner.html" aria-current="page"> Academic Planner </a>
+
+          <!-- Links to the Contact page. -->
+          <a href="contact.html">Contact</a>
+
+          <!-- Ends the main navigation menu. -->
+        </nav>
+
+        <!-- Ends the header container. -->
+      </div>
+
+      <!-- Ends the website header. -->
+    </header>
+
+    <!-- Main content of the Academic Planner page. -->
+    <main class="container planner-section">
+      <!-- Introduces the Academic Planner and explains its purpose. -->
+      <section class="planner-intro">
+        <!-- Displays the heading of the Academic Planner. -->
+        <h2>My Academic Planner</h2>
+
+        <!-- Explains how users can organize and manage their academic tasks. -->
+        <p>
+          Organize your academic activities by adding tasks, marking completed
+          work, and deleting tasks when necessary.
+        </p>
+
+        <!-- Ends the introduction section. -->
+      </section>
+
+      <!-- Form used to enter a new academic task. -->
+      <section class="planner-card" aria-labelledby="add-task-heading">
+        <!-- Displays the heading for the task creation form. -->
+        <h3 id="add-task-heading">Add a New Task</h3>
+
+        <!-- Creates the form used to submit a new academic task. -->
+        <form id="task-form">
+          <!-- Groups the task description label and input field together. -->
+          <div class="form-group">
+            <!-- Labels the field where the user enters the task description. -->
+            <label for="task-input">Task Description</label>
+
+            <!-- Collects the task description and makes it a required field. -->
+            <input
+              type="text"
+              id="task-input"
+              name="task"
+              placeholder="e.g. Complete COS106 assignment"
+              required
+            />
+
+            <!-- Ends the task description form group. -->
+          </div>
+
+          <!-- Groups the due date label and input field together. -->
+          <div class="form-group">
+            <!-- Labels the optional due date field. -->
+            <label for="task-date">Due Date (optional)</label>
+
+            <!-- Allows the user to select a due date for the task. -->
+            <input type="date" id="task-date" name="dueDate" />
+
+            <!-- Ends the due date form group. -->
+          </div>
+
+          <!-- JavaScript will handle the form submission. -->
+          <!-- Creates the button used to add a task to the planner. -->
+          <button type="submit" class="btn">Add Task</button>
+
+          <!-- Ends the task creation form. -->
+        </form>
+
+        <!-- Ends the task creation card. -->
+      </section>
+
+      <!-- Displays the task count and the task list. -->
+      <section class="planner-card" aria-labelledby="task-list-heading">
+        <!-- Displays the heading for the user's academic tasks. -->
+        <h3 id="task-list-heading">My Tasks</h3>
+
+        <!-- Shows the task summary and announces updates to screen readers. -->
+        <p id="task-summary" aria-live="polite">No tasks added yet.</p>
+
+        <!-- JavaScript will insert task items into this list. -->
+        <ul id="task-list" class="task-list"></ul>
+
+        <!-- Shown when there are no tasks. -->
+        <p id="empty-message">
+          Your academic planner is empty. Add your first task above.
+        </p>
+
+        <!-- Ends the task list section. -->
+      </section>
+
+      <!-- Ends the main content of the Academic Planner page. -->
+    </main>
+    <!-- Website footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <p>&copy; 2026 My Student Portfolio. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- Loads JavaScript after the HTML has been parsed -->
+    <script src="script.js" defer></script>
+  </body>
+</html>

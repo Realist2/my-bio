@@ -1,0 +1,1273 @@
+* {
+    box-sizing: border-box;
+    /* Makes width calculations include padding and borders. */
+}
+
+/* Stores reusable colors for the entire website. */
+:root {
+    --navy: #17365d;
+    /* Main navy-blue brand color. */
+
+    --navy-dark: #102640;
+    /* Darker blue for hover effects. */
+
+    --blue-light: #eaf1f8;
+    /* Light blue for backgrounds. */
+
+    --white: #ffffff;
+    /* White used for backgrounds and text. */
+
+    --text: #29364b;
+    /* Main text color. */
+
+    --muted: #667085;
+    /* Softer color for secondary text. */
+
+    --border: #dce4ee;
+    /* Light color for borders. */
+}
+
+/* Sets the default appearance of the webpage. */
+body {
+    margin: 0;
+    /* Removes the browser's default outer margin. */
+
+    font-family: Arial, Helvetica, sans-serif;
+    /* Sets a clear, readable font. */
+
+    color: var(--text);
+    /* Uses the main text color variable. */
+
+    background-color: var(--white);
+    /* Sets the default page background to white. */
+
+    line-height: 1.7;
+    /* Adds vertical space between lines of text. */
+}
+
+/* Makes images responsive by default. */
+img {
+    max-width: 100%;
+    /* Prevents images from exceeding their containers. */
+
+    height: auto;
+    /* Preserves the original image proportions. */
+}
+
+/* Gives content sections a shared maximum width. */
+.container {
+    width: min(1100px, 90%);
+    /* Uses up to 1100px or 90% of the screen width. */
+
+    margin-inline: auto;
+    /* Centres the container horizontally. */
+}
+
+/* Styles the main headings. */
+h1,
+h2,
+h3 {
+    line-height: 1.2;
+    /* Keeps headings compact and readable. */
+
+    color: var(--navy);
+    /* Gives headings the navy-blue color. */
+}
+/* Styles the top navigation bar. */
+.site-header {
+    background-color: var(--navy);
+    /* Gives the header a navy-blue background. */
+
+    color: var(--white);
+    /* Sets the default header text to white. */
+
+    padding: 18px 0;
+    /* Adds vertical space inside the header. */
+}
+
+/* Arranges the logo and navigation side by side. */
+.nav-container {
+    display: flex;
+    /* Activates Flexbox layout. */
+
+    justify-content: space-between;
+    /* Pushes the logo and navigation apart. */
+
+    align-items: center;
+    /* Aligns them vertically. */
+
+    gap: 20px;
+    /* Adds space between the two groups. */
+}
+
+/* Styles the website logo. */
+.logo {
+    color: var(--white);
+    /* Makes the logo text white. */
+
+    text-decoration: none;
+    /* Removes the default link underline. */
+
+    font-size: 1.4rem;
+    /* Makes the logo larger than normal text. */
+
+    font-weight: bold;
+    /* Makes the logo text bold. */
+}
+
+/* Arranges navigation links in a row. */
+nav {
+    display: flex;
+    /* Places navigation links in a flexible row. */
+
+    flex-wrap: wrap;
+    /* Allows links to move onto another line. */
+
+    justify-content: center;
+    /* Centres the links when they wrap. */
+
+    gap: 10px 18px;
+    /* Sets vertical and horizontal spacing. */
+}
+
+/* Styles every navigation link. */
+nav a {
+    color: var(--white);
+    /* Makes the links white. */
+
+    text-decoration: none;
+    /* Removes underlines. */
+
+    font-size: 0.95rem;
+    /* Sets the link text size. */
+
+    transition: color 0.25s ease;
+    /* Smoothly changes the link color on hover. */
+}
+
+/* Highlights a link when the pointer is over it. */
+nav a:hover,
+nav a.active {
+    color: #bcd8ff;
+    /* Uses light blue for the active or hovered link. */
+}
+/* Adds a light background to the welcome area. */
+.hero {
+    background-color: var(--blue-light);
+    /* Creates a soft blue background. */
+
+    padding: 75px 0;
+    /* Adds space above and below the hero content. */
+}
+
+/* Places the introduction and photograph side by side. */
+.hero-content {
+    display: grid;
+    /* Uses CSS Grid to arrange the two columns. */
+
+    grid-template-columns: 1.4fr 1fr;
+    /* Gives the text column more width than the image. */
+
+    align-items: center;
+    /* Vertically aligns the text and image. */
+
+    gap: 55px;
+    /* Creates space between the columns. */
+}
+
+/* Styles the small introductory label. */
+.eyebrow {
+    color: var(--navy);
+    /* Uses the main brand color. */
+
+    font-size: 0.8rem;
+    /* Makes the label smaller than normal text. */
+
+    font-weight: bold;
+    /* Makes the label stand out. */
+
+    letter-spacing: 2px;
+    /* Adds space between letters. */
+}
+
+/* Styles the main homepage heading. */
+.hero h1 {
+    font-size: clamp(2.2rem, 5vw, 3.5rem);
+    /* Adjusts the heading size to the screen width. */
+
+    margin: 15px 0;
+    /* Adds space above and below the heading. */
+}
+
+/* Styles the subtitle below the main heading. */
+.hero h2 {
+    font-size: 1.25rem;
+    /* Sets a moderate subtitle size. */
+
+    font-weight: normal;
+    /* Keeps the subtitle lighter than the main heading. */
+}
+
+/* Styles the introductory paragraph. */
+.hero-text > p:not(.eyebrow) {
+    color: var(--muted);
+    /* Uses a softer text color. */
+
+    max-width: 580px;
+    /* Prevents long lines from becoming difficult to read. */
+}
+
+/* Adds space above the action buttons. */
+.hero-buttons {
+    display: flex;
+    /* Arranges buttons using Flexbox. */
+
+    flex-wrap: wrap;
+    /* Allows buttons to wrap on narrow screens. */
+
+    gap: 14px;
+    /* Adds space between the buttons. */
+
+    margin-top: 25px;
+    /* Separates the buttons from the paragraph. */
+}
+
+/* Provides common styling for both buttons. */
+.btn {
+    display: inline-block;
+    /* Allows padding and spacing on the links. */
+
+    padding: 12px 22px;
+    /* Adds space inside each button. */
+
+    border-radius: 6px;
+    /* Slightly rounds the corners. */
+
+    text-decoration: none;
+    /* Removes the link underline. */
+
+    font-weight: bold;
+    /* Makes button text stand out. */
+
+    transition: background-color 0.25s ease,
+                color 0.25s ease;
+    /* Smoothly animates color changes. */
+}
+
+/* Styles the main action button. */
+.btn-primary {
+    background-color: var(--navy);
+    /* Gives the button a navy background. */
+
+    color: var(--white);
+    /* Makes its text white. */
+}
+
+/* Darkens the primary button when hovered. */
+.btn-primary:hover {
+    background-color: var(--navy-dark);
+}
+
+/* Styles the secondary action button. */
+.btn-outline {
+    color: var(--navy);
+    /* Gives the text a navy color. */
+
+    border: 1px solid var(--navy);
+    /* Adds a navy border. */
+
+    background-color: transparent;
+    /* Keeps the button background transparent. */
+}
+
+/* Changes the secondary button on hover. */
+.btn-outline:hover {
+    background-color: var(--navy);
+    /* Fills the button with navy blue. */
+
+    color: var(--white);
+    /* Changes the text to white. */
+}
+
+/* Styles the profile photograph. */
+.hero-image {
+    text-align: center;
+    /* Centres the photograph in its column. */
+}
+
+/* Gives the photograph a professional appearance. */
+.hero-image img {
+    width: 320px;
+    /* Sets the preferred image width. */
+
+    height: 320px;
+    /* Sets the preferred image height. */
+
+    max-width: 100%;
+    /* Prevents overflow on narrow screens. */
+
+    object-fit: cover;
+    /* Crops the image neatly without stretching it. */
+
+    border-radius: 50%;
+    /* Creates a circular profile photograph. */
+
+    border: 7px solid var(--white);
+    /* Adds a white border around the photograph. */
+
+    box-shadow: 0 8px 25px rgba(23, 54, 93, 0.15);
+    /* Adds a subtle shadow. */
+}
+
+/* Adds spacing around the biography section. */
+.intro-section {
+    padding: 65px 0;
+    /* Creates space above and below the section. */
+}
+
+/* Limits the width of the biography paragraph. */
+.intro-section .container > p:not(.eyebrow) {
+    max-width: 800px;
+    /* Keeps lines comfortable to read. */
+
+    color: var(--muted);
+    /* Uses the secondary text color. */
+}
+
+/* Styles the biography link. */
+.text-link {
+    color: var(--navy);
+    /* Makes the link navy blue. */
+
+    font-weight: bold;
+    /* Makes the link noticeable. */
+
+    text-decoration: none;
+    /* Removes its underline. */
+}
+
+/* Underlines the biography link on hover. */
+.text-link:hover {
+    text-decoration: underline;
+}
+/* Styles the section containing the three cards. */
+.features-section {
+    padding: 60px 0;
+    /* Adds vertical spacing. */
+
+    background-color: #f7f9fc;
+    /* Gives the section a very light background. */
+}
+
+/* Centres the feature section heading. */
+.features-section h2 {
+    text-align: center;
+    /* Centres the heading horizontally. */
+
+    margin-bottom: 35px;
+    /* Adds space below the heading. */
+}
+
+/* Arranges cards in a responsive grid. */
+.feature-grid {
+    display: grid;
+    /* Activates CSS Grid. */
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    /* Creates three equally sized columns. */
+
+    gap: 24px;
+    /* Adds space between cards. */
+}
+
+/* Styles each individual feature card. */
+.feature-card {
+    background-color: var(--white);
+    /* Gives each card a white background. */
+
+    padding: 26px;
+    /* Adds inner spacing. */
+
+    border: 1px solid var(--border);
+    /* Adds a subtle border. */
+
+    border-radius: 10px;
+    /* Rounds the card corners. */
+
+    transition: transform 0.25s ease,
+                box-shadow 0.25s ease;
+    /* Smoothly animates the card hover effect. */
+}
+
+/* Lifts the card slightly when hovered. */
+.feature-card:hover {
+    transform: translateY(-4px);
+    /* Moves the card upward by four pixels. */
+
+    box-shadow: 0 8px 20px rgba(23, 54, 93, 0.08);
+    /* Adds a subtle shadow. */
+}
+
+/* Styles links inside the cards. */
+.feature-card a {
+    color: var(--navy);
+    /* Uses the website's main color. */
+
+    font-weight: bold;
+    /* Makes the links stand out. */
+
+    text-decoration: none;
+    /* Removes the underline. */
+}
+
+/* Styles the bottom section of the website. */
+.site-footer {
+    background-color: var(--navy);
+    /* Uses the same navy as the header. */
+
+    color: var(--white);
+    /* Makes footer text white. */
+
+    padding: 20px 0;
+    /* Adds vertical space inside the footer. */
+
+    text-align: center;
+    /* Centres the copyright text. */
+}
+
+/* Removes unnecessary paragraph spacing in the footer. */
+.site-footer p {
+    margin: 0;
+}
+/* Adjusts the layout for tablets and smaller screens. */
+@media (max-width: 800px) {
+
+    /* Allows the header elements to stack vertically. */
+    .nav-container {
+        flex-direction: column;
+        /* Places the logo above the navigation. */
+    }
+
+    /* Changes the hero section to one column. */
+    .hero-content {
+        grid-template-columns: 1fr;
+        /* Places the text and image on separate rows. */
+
+        gap: 35px;
+        /* Reduces the gap between them. */
+    }
+
+    /* Displays two feature cards per row. */
+    .feature-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    /* Reduces the hero section spacing. */
+    .hero {
+        padding: 50px 0;
+    }
+}
+
+/* Adjusts the layout for mobile phones. */
+@media (max-width: 520px) {
+
+    /* Makes feature cards use the full available width. */
+    .feature-grid {
+        grid-template-columns: 1fr;
+        /* Stacks cards vertically. */
+    }
+
+    /* Reduces spacing inside the hero section. */
+    .hero {
+        padding: 35px 0;
+    }
+
+    /* Makes the profile image smaller on mobile. */
+    .hero-image img {
+        width: 240px;
+        height: 240px;
+    }
+
+    /* Gives the buttons more room on narrow screens. */
+    .hero-buttons .btn {
+        text-align: center;
+        /* Centres the text inside each button. */
+    }
+}
+
+/* Respects users who prefer reduced motion. */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        /* Avoids smooth scrolling for these users. */
+
+        transition-duration: 0.01ms !important;
+        /* minimize animated transitions. */
+    }
+}
+
+/* =========================================
+   ABOUT ME PAGE STYLES
+   ========================================= */
+
+/* Adds space around the About Me page content. */
+.about-page {
+    padding-top: 45px;
+    /* Separates the page content from the header. */
+
+    padding-bottom: 60px;
+    /* Adds space above the footer. */
+}
+
+/* Styles the introductory section. */
+.about-intro {
+    background-color: var(--blue-light);
+    /* Reuses the light-blue color from the homepage. */
+
+    padding: 35px;
+    /* Adds space inside the introduction. */
+
+    border-radius: 10px;
+    /* Rounds the corners. */
+
+    margin-bottom: 30px;
+    /* Separates the introduction from the next section. */
+}
+
+/* Styles the main About Me heading. */
+.about-intro h1 {
+    font-size: 2.5rem;
+    /* Makes the heading prominent. */
+
+    margin: 10px 0;
+    /* Adds vertical spacing around the heading. */
+}
+
+/* Limits the width of the introduction paragraph. */
+.about-intro > p:not(.eyebrow) {
+    max-width: 750px;
+    /* Prevents long lines from becoming difficult to read. */
+}
+
+/* Styles each information section. */
+.about-section {
+    background-color: var(--white);
+    /* Keeps each section white. */
+
+    padding: 25px;
+    /* Adds space inside the section. */
+
+    margin-bottom: 22px;
+    /* Separates one section from another. */
+
+    border: 1px solid var(--border);
+    /* Adds a subtle outline. */
+
+    border-radius: 10px;
+    /* Rounds the corners. */
+}
+
+/* Removes excess space above section headings. */
+.about-section h2 {
+    margin-top: 0;
+    /* Aligns the heading with the top of its section. */
+}
+
+/* Styles the technical skills list. */
+.skills-list {
+    padding-left: 25px;
+    /* Indents the bullet points. */
+}
+
+/* Adds space between individual skills. */
+.skills-list li {
+    margin-bottom: 8px;
+    /* Improves readability. */
+}
+
+/* Adds space around the return button. */
+.about-action {
+    margin-top: 30px;
+    /* Separates the button from the preceding section. */
+}
+
+/* Adjusts spacing for mobile devices. */
+@media (max-width: 520px) {
+
+    .about-page {
+        padding-top: 25px;
+        /* Reduces the top spacing on small screens. */
+    }
+
+    .about-intro,
+    .about-section {
+        padding: 20px;
+        /* Prevents content from feeling cramped. */
+    }
+
+    .about-intro h1 {
+        font-size: 2rem;
+        /* Makes the heading fit smaller screens. */
+    }
+}
+/* Adds space around the project page. */
+.projects-page {
+    padding-top: 45px;
+    /* Adds space below the navigation. */
+
+    padding-bottom: 60px;
+    /* Adds space above the footer. */
+}
+
+/* Styles the introduction at the top. */
+.projects-intro {
+    text-align: center;
+    /* Centres the introduction text. */
+
+    max-width: 750px;
+    /* Limits the text width for readability. */
+
+    margin: 0 auto 40px;
+    /* Centres the section and adds bottom spacing. */
+}
+
+/* Styles the main Projects heading. */
+.projects-intro h1 {
+    font-size: 2.5rem;
+    /* Makes the heading prominent. */
+
+    margin: 10px 0;
+    /* Adds vertical spacing around it. */
+}
+
+/* Softens the introductory paragraph color. */
+.projects-intro > p:not(.eyebrow) {
+    color: var(--muted);
+    /* Reuses the muted text color. */
+}
+
+/* Creates a responsive grid for the project cards. */
+.projects-grid {
+    display: grid;
+    /* Activates CSS Grid. */
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    /* Creates three equal-width columns. */
+
+    gap: 25px;
+    /* Adds space between the cards. */
+
+    align-items: stretch;
+    /* Allows cards to stretch to equal row height. */
+}
+
+/* Styles each project card. */
+.project-card {
+    background-color: var(--white);
+    /* Gives the card a white background. */
+
+    border: 1px solid var(--border);
+    /* Adds a subtle border. */
+
+    border-radius: 10px;
+    /* Rounds the corners. */
+
+    overflow: hidden;
+    /* Keeps images within the rounded corners. */
+
+    display: flex;
+    /* Uses Flexbox for the card's internal layout. */
+
+    flex-direction: column;
+    /* Stacks the image and content vertically. */
+
+    transition: transform 0.25s ease,
+                box-shadow 0.25s ease;
+    /* Smoothly animates the hover effect. */
+}
+
+/* Adds a hover effect to project cards. */
+.project-card:hover {
+    transform: translateY(-4px);
+    /* Moves the card slightly upward. */
+
+    box-shadow: 0 8px 22px rgba(23, 54, 93, 0.10);
+    /* Adds a soft shadow. */
+}
+
+/* Styles the project screenshots. */
+.project-card > img {
+    width: 100%;
+    /* Makes the image fill the card width. */
+
+    aspect-ratio: 16 / 10;
+    /* Gives screenshots a consistent shape. */
+
+    object-fit: cover;
+    /* Crops images neatly without stretching. */
+
+    background-color: var(--blue-light);
+    /* Provides a background if an image is missing. */
+}
+
+/* Adds spacing around project text. */
+.project-content {
+    padding: 22px;
+    /* Creates space between the content and card edges. */
+
+    display: flex;
+    /* Uses Flexbox to arrange the content. */
+
+    flex-direction: column;
+    /* Stacks the content vertically. */
+
+    flex: 1;
+    /* Allows the content area to fill available height. */
+}
+
+/* Styles the technology label. */
+.project-category {
+    color: var(--navy);
+    /* Uses the navy-blue theme. */
+
+    font-size: 0.8rem;
+    /* Makes the label smaller than normal text. */
+
+    font-weight: bold;
+    /* Makes the label stand out. */
+
+    text-transform: uppercase;
+    /* Displays the category in uppercase. */
+
+    letter-spacing: 1px;
+    /* Adds space between letters. */
+}
+
+/* Styles each project title. */
+.project-content h2 {
+    font-size: 1.35rem;
+    /* Sets a clear heading size. */
+
+    margin: 5px 0 10px;
+    /* Controls spacing around the title. */
+}
+
+/* Styles project descriptions. */
+.project-content > p:not(.project-category) {
+    color: var(--muted);
+    /* Makes descriptions softer than headings. */
+
+    flex: 1;
+    /* Helps align links when cards have different text lengths. */
+}
+
+/* Styles project links. */
+.project-link {
+    color: var(--navy);
+    /* Uses the main brand color. */
+
+    font-weight: bold;
+    /* Emphases the link. */
+
+    text-decoration: none;
+    /* Removes the underline. */
+
+    margin-top: 12px;
+    /* Adds space above the link. */
+}
+
+/* Underlines project links on hover. */
+.project-link:hover {
+    text-decoration: underline;
+}
+
+/* Styles the call-to-action section. */
+.projects-action {
+    text-align: center;
+    /* Centres the text and button. */
+
+    margin-top: 60px;
+    /* Separates the section from the cards. */
+
+    padding: 35px 20px;
+    /* Adds inner spacing. */
+
+    background-color: var(--blue-light);
+    /* Reuses the light-blue background. */
+
+    border-radius: 10px;
+    /* Rounds the section corners. */
+}
+
+/* Adjusts the grid for tablets. */
+@media (max-width: 800px) {
+    .projects-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        /* Shows two cards per row. */
+    }
+}
+
+/* Adjusts the grid for mobile phones. */
+@media (max-width: 520px) {
+    .projects-page {
+        padding-top: 25px;
+        /* Reduces top spacing. */
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+        /* Stacks the project cards vertically. */
+    }
+
+    .projects-intro h1 {
+        font-size: 2rem;
+        /* Makes the heading fit small screens. */
+    }
+}
+
+/* ===== ACADEMIC PLANNER STYLES ===== */
+
+/* Adds space around the planner content */
+.planner-section {
+    padding-top: 40px;
+    padding-bottom: 50px;
+}
+
+/* Centres the introduction */
+.planner-intro {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Styles the form and task-list panels */
+.planner-card {
+    background-color: #ffffff;
+    color: #172554;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Adds space between form fields */
+#task-form .form-group {
+    margin-bottom: 18px;
+}
+
+/* Makes the input fields fit the available width */
+#task-form input {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font: inherit;
+}
+
+/* Highlights an input when the user selects it */
+#task-form input:focus {
+    outline: 2px solid #2563eb;
+    border-color: #2563eb;
+}
+
+/* Styles the task list */
+.task-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+/* Styles each individual task */
+.task-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 15px;
+    margin-bottom: 12px;
+    border: 1px solid #dbeafe;
+    border-radius: 8px;
+    background-color: #f8fafc;
+}
+
+/* Allows task text to wrap on smaller screens */
+.task-details {
+    flex: 1;
+    overflow-wrap: anywhere;
+}
+
+/* Displays the task due date */
+.task-date-label {
+    display: block;
+    margin-top: 5px;
+    color: #64748b;
+    font-size: 0.9rem;
+}
+
+/* Visual indication that a task is completed */
+.task-item.completed .task-name {
+    text-decoration: line-through;
+    color: #64748b;
+}
+
+/* Keeps task buttons aligned */
+.task-actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+/* Shared styles for task action buttons */
+.task-actions button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font: inherit;
+    transition: opacity 0.2s ease;
+}
+
+.task-actions button:hover {
+    opacity: 0.8;
+}
+
+/* Styles the complete button */
+.complete-task {
+    background-color: #dbeafe;
+    color: #1e3a8a;
+}
+
+/* Styles the delete button */
+.delete-task {
+    background-color: #fee2e2;
+    color: #991b1b;
+}
+
+/* Makes task items easier to use on mobile devices */
+@media (max-width: 520px) {
+    .planner-card {
+        padding: 18px;
+    }
+
+    .task-item {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .task-actions {
+        width: 100%;
+    }
+}
+
+/* Styles tasks marked as completed. */
+.task-item .completed {
+    text-decoration: line-through;
+    color: #667085;
+}
+
+/* Arranges task details and buttons. */
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+/* Keeps task details arranged vertically. */
+.task-details {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+/* Arranges the Complete and Delete buttons. */
+.task-actions {
+    display: flex;
+    gap: 8px;
+}
+
+/* Styles task buttons. */
+.task-actions button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+}
+
+/* Styles the Complete button. */
+.complete-button {
+    background-color: #17365d;
+}
+
+/* Styles the Delete button. */
+.delete-button {
+    background-color: #b42318;
+}
+
+/* Adds hover feedback. */
+.task-actions button:hover {
+    opacity: 0.85;
+}
+/* Styles the contact section and controls its width and vertical spacing. */
+.contact-section {
+    max-width: 750px;
+    padding-top: 50px;
+    padding-bottom: 60px;
+}
+
+/* Adds space below the contact page heading. */
+.contact-section h1 {
+    margin-bottom: 12px;
+}
+
+/* Styles the contact form container. */
+.contact-form {
+    margin-top: 30px;
+    padding: 30px;
+    background-color: #f7f9fc;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+}
+
+/* Arranges each form group vertically with consistent spacing. */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+/* Styles the labels of the form fields. */
+.form-group label {
+    color: var(--navy);
+    font-weight: bold;
+}
+
+/* Styles the input fields and message box. */
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    font: inherit;
+    background-color: var(--white);
+}
+
+/* Highlights an input field when it receives focus. */
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: 2px solid var(--navy);
+    outline-offset: 2px;
+}
+
+/* Allows the message box to be resized vertically. */
+.form-group textarea {
+    resize: vertical;
+}
+
+/* Changes the cursor to indicate that the form button is clickable. */
+.contact-form button {
+    cursor: pointer;
+}
+
+/* Adds spacing and bold text to the form feedback message. */
+#contact-feedback {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+/* Adjusts the contact form padding on smaller screens. */
+@media (max-width: 600px) {
+    .contact-form {
+        padding: 20px;
+    }
+}
+
+/* Adds vertical spacing around the academic information section. */
+.academic-info {
+    padding: 40px 0;
+}
+
+/* Adds space below the academic information heading. */
+.academic-info h2 {
+    margin-bottom: 12px;
+}
+
+/* Makes the table scroll horizontally when it exceeds its container width. */
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 20px;
+    border-radius: 8px;
+}
+
+/* Sets the table width, background, borders, and border spacing. */
+.academic-info table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--white);
+    border: 1px solid var(--border);
+}
+
+/* Adds padding, borders, and left alignment to table headings and cells. */
+.academic-info th,
+.academic-info td {
+    padding: 14px 16px;
+    border: 1px solid var(--border);
+    text-align: left;
+}
+
+/* Gives the table heading row a navy-blue background and white text. */
+.academic-info thead {
+    background-color: var(--navy);
+    color: var(--white);
+}
+
+/* Gives every even-numbered table row a light-blue background. */
+.academic-info tbody tr:nth-child(even) {
+    background-color: #f2f6fb;
+}
+
+/* Highlights a table row when the mouse pointer moves over it. */
+.academic-info tbody tr:hover {
+    background-color: var(--blue-light);
+}
+
+/* Styles the multimedia section on the About Me page. */
+.multimedia-section {
+    padding: 40px 0;
+    margin-top: 20px;
+}
+
+/* Styles the heading of the multimedia section. */
+.multimedia-section h2 {
+    color: var(--navy);
+    margin-bottom: 12px;
+}
+
+/* Adds spacing below the introductory paragraph. */
+.multimedia-section p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+/* Styles the video player. */
+.multimedia-section video {
+    display: block;
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    margin: 0 auto;
+    border: 3px solid var(--navy);
+    border-radius: 10px;
+    background-color: #000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+/* =========================================
+   ANIMATIONS AND TRANSITIONS
+   ========================================= */
+
+/* Creates a fade-in animation with a gentle upward movement. */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(16px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animates the main content when each page loads. */
+main {
+    animation: fadeInUp 0.7s ease-out both;
+}
+
+/* Adds smooth transitions to navigation links and buttons. */
+nav a,
+.btn,
+button {
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+/* Slightly raises navigation links when the visitor hovers over them. */
+nav a:hover {
+    transform: translateY(-2px);
+}
+
+/* Adds a smooth lifting effect to buttons. */
+.btn:hover,
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Adds smooth transitions to project and planner cards. */
+.project-card,
+.planner-card {
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+/* Raises the cards slightly when the visitor hovers over them. */
+.project-card:hover,
+.planner-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* Smoothly highlights contact form fields when focused. */
+.contact-form input,
+.contact-form textarea {
+    transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+/* Makes the active form field easier to identify. */
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: var(--navy);
+    box-shadow: 0 0 0 3px rgba(37, 74, 117, 0.12);
+}
+
+/* Respects visitors who prefer reduced motion. */
+@media (prefers-reduced-motion: reduce) {
+    main {
+        animation: none;
+    }
+
+    nav a,
+    .btn,
+    button,
+    .project-card,
+    .planner-card,
+    .contact-form input,
+    .contact-form textarea {
+        transition: none;
+    }
+
+    nav a:hover,
+    .btn:hover,
+    button:hover,
+    .project-card:hover,
+    .planner-card:hover {
+        transform: none;
+    }
+}

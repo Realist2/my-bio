@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Makes the layout responsive on phones and computers. -->
+
+    <title>About Me | Student Portfolio</title>
+    <!-- Sets the browser tab title. -->
+
+    <link rel="stylesheet" href="style.css" />
+    <!-- Connects the shared CSS stylesheet. -->
+  </head>
+
+  <body>
+    <!-- Contains the visible content of the page. -->
+
+    <!-- HEADER AND NAVIGATION -->
+    <header class="site-header">
+      <div class="container nav-container">
+        <!-- Groups the logo and navigation links. -->
+
+        <a href="index.html" class="logo">MyPortfolio</a>
+        <!-- Clicking the logo returns to the homepage. -->
+
+        <nav aria-label="Main navigation">
+          <!-- Provides links to the other website pages. -->
+
+          <a href="index.html">Home</a>
+          <a href="about.html" class="active">About Me</a>
+          <a href="projects.html">Projects</a>
+          <a href="planner.html">Academic Planner</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- MAIN ABOUT ME CONTENT -->
+    <main class="container about-page">
+      <!-- PAGE INTRODUCTION -->
+      <section class="about-intro">
+        <p class="eyebrow">GET TO KNOW ME</p>
+        <!-- A small introductory label. -->
+
+        <h1>About Me</h1>
+        <!-- The main heading of this page. -->
+
+        <p>
+          Hello! I am a university student passionate about learning, technology
+          and personal development. This page introduces my education, goals,
+          skills and interests.
+        </p>
+        <!-- Replace this sample text with your own biography. -->
+      </section>
+
+      <!-- EDUCATIONAL BACKGROUND -->
+      <section class="about-section">
+        <h2>Educational Background</h2>
+        <!-- Heading for your academic history. -->
+
+        <p>
+          I am currently studying at MIVA Open University, where I am developing
+          my knowledge and skills through my academic programme.
+        </p>
+        <!-- Edit this paragraph to accurately describe your studies. -->
+
+        <p>
+          My coursework helps me build problem-solving, analytical and technical
+          skills that I can apply to future projects.
+        </p>
+        <!-- Describes the value of your education. -->
+      </section>
+
+      <!-- CAREER ASPIRATIONS -->
+      <section class="about-section">
+        <h2>Career Aspirations</h2>
+
+        <p>
+          My career goal is to become a skilled professional in the technology
+          industry. I want to improve my programming abilities, develop
+          practical solutions and contribute to meaningful digital projects.
+        </p>
+        <!-- Replace this sample goal with your own ambition. -->
+      </section>
+
+      <!-- TECHNICAL SKILLS -->
+      <section class="about-section">
+        <h2>Technical Skills</h2>
+
+        <p>
+          I am developing my knowledge of web technologies and programming
+          through my coursework and practice.
+        </p>
+
+        <!-- An unordered list displays skills as bullet points. -->
+        <ul class="skills-list">
+          <li>HTML — webpage structure</li>
+          <li>CSS — webpage styling and layout</li>
+          <li>JavaScript — webpage interactivity</li>
+          <li>Problem-solving and logical thinking</li>
+        </ul>
+        <!-- Keep only skills that accurately reflect your abilities. -->
+      </section>
+
+      <!-- HOBBIES AND INTERESTS -->
+      <section class="about-section">
+        <h2>Hobbies and Interests</h2>
+
+        <p>
+          My interests include learning new technologies, exploring useful
+          digital tools, solving problems and improving my knowledge.
+        </p>
+        <!-- Add your own hobbies, such as reading, music or sports. -->
+      </section>
+
+      <!-- Academic information section containing a summary of the student's academic details. -->
+      <section class="academic-info">
+        <!-- Displays the heading for the academic information section. -->
+        <h2>My Academic Information</h2>
+
+        <!-- Briefly introduces the information presented in the table. -->
+        <p>Here is a summary of my academic details.</p>
+
+        <!-- Wraps the table to allow horizontal scrolling on smaller screens. -->
+        <div class="table-container">
+          <!-- Creates a table for displaying academic information. -->
+          <table>
+            <!-- Defines the heading section of the table. -->
+            <thead>
+              <tr>
+                <!-- Labels the serial number column. -->
+                <th scope="col">S/N</th>
+
+                <!-- Labels the type of academic information. -->
+                <th scope="col">Information</th>
+
+                <!-- Labels the column containing the details. -->
+                <th scope="col">Details</th>
+              </tr>
+            </thead>
+
+            <!-- Contains the academic information records. -->
+            <tbody>
+              <!-- First row: programme of study. -->
+              <tr>
+                <td>1</td>
+                <td>Programme</td>
+                <td>Your programme of study</td>
+              </tr>
+
+              <!-- Second row: course code. -->
+              <tr>
+                <td>2</td>
+                <td>Course Code</td>
+                <td>COS106</td>
+              </tr>
+
+              <!-- Third row: course title. -->
+              <tr>
+                <td>3</td>
+                <td>Course Title</td>
+                <td>Introduction to Web Technologies</td>
+              </tr>
+
+              <!-- Fourth row: academic institution. -->
+              <tr>
+                <td>4</td>
+                <td>Academic Institution</td>
+                <td>Miva Open University</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Section for displaying multimedia content. -->
+        <section class="multimedia-section">
+          <!-- Heading for the multimedia section. -->
+          <h2>My Introduction Video</h2>
+
+          <!-- Explains the purpose of the video. -->
+          <p>Watch this short video to learn more about me and my interests.</p>
+
+          <!-- Displays a video with playback controls. -->
+          <video controls width="100%">
+            <source src="videos/introduction.mp4" type="video/mp4" />
+          </video>
+        </section>
+      </section>
+      <!-- LINK BACK TO THE HOMEPAGE -->
+      <section class="about-action">
+        <a href="index.html" class="btn btn-primary"> Back to Home </a>
+        <!-- Provides a convenient route back to the homepage. -->
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <div class="container">
+        <p>&copy; 2026 Your Name. All rights reserved.</p>
+        <!-- Replace Your Name with your name. -->
+      </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+    <!-- Loads the shared JavaScript file. -->
+  </body>
+</html>

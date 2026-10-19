@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Me | My Student Portfolio</title>
+    <!-- Title displayed in the browser tab -->
+
+    <link rel="stylesheet" href="style.css" />
+    <!-- Connects the shared CSS stylesheet. -->
+
+  </head>
+  <body>
+    <!-- Website header and navigation -->
+    <header class="site-header">
+      <div class="container nav-container">
+        <!-- Groups the logo and navigation links. -->
+
+        <a href="index.html" class="logo"> My Student Portfolio </a>
+        <!-- Clicking the logo returns to the homepage. -->
+
+        <nav aria-label="Main navigation">
+          <!-- Provides links to the other website pages. -->
+
+          <a href="index.html">Home</a>
+          <a href="about.html">About Me</a>
+          <a href="projects.html">Projects</a>
+          <a href="planner.html">Academic Planner</a>
+          <a href="contact.html" aria-current="page">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main section containing the contact page content and form. -->
+    <main class="container contact-section">
+      <!-- Displays the main heading of the contact page. -->
+      <h1>Contact Me</h1>
+
+      <!-- Briefly explains why visitors might use the contact form. -->
+      <p>
+        Have a question or want to work with me? Fill out the form below to get
+        in touch.
+      </p>
+
+      <!-- Creates the contact form and gives it an ID for JavaScript validation. -->
+      <form id="contact-form" class="contact-form">
+        <!-- Groups the full name label and input field together. -->
+        <div class="form-group">
+          <!-- Labels the input field where the visitor enters their full name. -->
+          <label for="contact-name">Full Name</label>
+
+          <!-- Collects the visitor's full name and makes the field compulsory. -->
+          <input
+            type="text"
+            id="contact-name"
+            name="name"
+            placeholder="Enter your full name"
+            required
+          />
+        </div>
+
+        <!-- Groups the email address label and input field together. -->
+        <div class="form-group">
+          <!-- Labels the input field where the visitor enters their email address. -->
+          <label for="contact-email">Email Address</label>
+
+          <!-- Collects the visitor's email address and checks its basic format. -->
+          <input
+            type="email"
+            id="contact-email"
+            name="email"
+            placeholder="example@email.com"
+            required
+          />
+        </div>
+
+        <!-- Groups the phone number label and input field together. -->
+        <div class="form-group">
+          <!-- Labels the input field where the visitor enters their phone number. -->
+          <label for="contact-phone">Phone Number</label>
+
+          <!-- Collects the phone number and restricts the permitted characters and length. -->
+          <input
+            type="tel"
+            id="contact-phone"
+            name="phone"
+            placeholder="e.g. 08012345678"
+            pattern="[0-9+() -]{7,20}"
+            title="Enter a phone number using digits, spaces, +, parentheses or hyphens."
+            required
+          />
+        </div>
+
+        <!-- Groups the message label and text area together. -->
+        <div class="form-group">
+          <!-- Labels the text area where the visitor writes their message. -->
+          <label for="contact-message">Message</label>
+
+          <!-- Provides a larger text field for entering the message. -->
+          <textarea
+            id="contact-message"
+            name="message"
+            rows="6"
+            placeholder="Write your message here..."
+            required
+          ></textarea>
+        </div>
+
+        <!-- Creates the button that submits the contact form for validation. -->
+        <button type="submit" class="btn btn-primary">Send Message</button>
+
+        <!-- Displays the form feedback -->
+        <p id="contact-feedback" role="status" aria-live="polite"></p>
+      </form>
+    </main>
+
+    <!-- Website footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <p>&copy; 2026 My Student Portfolio. All rights reserved.</p>
+      </div>
+    </footer>
+    <script src="script.js" defer></script>
+  </body>
+</html>

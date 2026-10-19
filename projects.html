@@ -1,0 +1,182 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Makes the page responsive on mobile devices. -->
+
+    <title>Projects | Student Portfolio</title>
+    <!-- Sets the browser tab title. -->
+
+    <link rel="stylesheet" href="style.css">
+    <!-- Connects the shared CSS stylesheet. -->
+</head>
+
+<body>
+    <!-- Contains the visible website content. -->
+
+    <!-- HEADER AND NAVIGATION -->
+    <header class="site-header">
+        <div class="container nav-container">
+            <!-- Groups the logo and navigation links. -->
+
+            <a href="index.html" class="logo">MyPortfolio</a>
+            <!-- Links the logo to the homepage. -->
+
+            <nav aria-label="Main navigation">
+                <!-- Contains links to the website pages. -->
+
+                <a href="index.html">Home</a>
+                <a href="about.html">About Me</a>
+                <a href="projects.html" class="active">Projects</a>
+                <a href="planner.html">Academic Planner</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- MAIN PROJECT CONTENT -->
+    <main class="container projects-page">
+
+        <!-- PROJECT PAGE INTRODUCTION -->
+        <section class="projects-intro">
+            <p class="eyebrow">MY WORK</p>
+            <!-- Small introductory label. -->
+
+            <h1>My Projects</h1>
+            <!-- Main heading of the page. -->
+
+            <p>
+                Welcome to my project portfolio. Here are three
+                examples of projects that demonstrate my learning
+                and developing skills in web technologies.
+            </p>
+            <!-- Introduces the projects to visitors. -->
+        </section>
+
+        <!-- PROJECT CARDS CONTAINER -->
+        <section class="projects-grid" aria-label="Portfolio projects">
+            <!-- Groups the project cards into a responsive grid. -->
+
+            <!-- PROJECT 1 -->
+            <article class="project-card">
+                <!-- Represents the first individual project. -->
+
+                <img
+                    src="images/project1.png"
+                    alt="Screenshot of a personal website project"
+                    loading="lazy"
+                >
+                <!-- Displays the first project screenshot.
+                     Add your own screenshot as project1.jpg. -->
+
+                <div class="project-content">
+                    <!-- Groups the project's text and link. -->
+
+                    <p class="project-category">HTML and CSS</p>
+                    <!-- Identifies the technologies used. -->
+
+                    <h2>Personal Website</h2>
+                    <!-- Names the project. -->
+
+                    <p>
+                        A personal website concept that presents
+                        a student's biography, interests and skills.
+                        It demonstrates HTML structure and CSS styling.
+                    </p>
+                    <!-- Describes the project's purpose. -->
+
+                    <a href="index.html" class="project-link">
+                        View Website &rarr;
+                    </a>
+                    <!-- Links to your actual homepage as a working demo. -->
+                </div>
+            </article>
+
+            <!-- PROJECT 2 -->
+            <article class="project-card">
+
+                <img
+                    src="images/project2.png"
+                    alt="Screenshot of a task manager interface"
+                    loading="lazy"
+                >
+                <!-- Displays the second project screenshot. -->
+
+                <div class="project-content">
+                    <p class="project-category">JavaScript</p>
+
+                    <h2>Task Manager</h2>
+
+                    <p>
+                        A task management concept designed to help
+                        users organize daily activities, track
+                        completion and manage their to-do lists.
+                    </p>
+
+                    <a href="planner.html" class="project-link">
+                        Explore Planner &rarr;
+                    </a>
+                    <!-- Links to the academic planner we will build. -->
+                </div>
+            </article>
+
+            <!-- PROJECT 3 -->
+            <article class="project-card">
+
+                <img
+                    src="images/project3.png"
+                    alt="Screenshot of an academic planner dashboard"
+                    loading="lazy"
+                >
+                <!-- Displays the third project screenshot. -->
+
+                <div class="project-content">
+                    <p class="project-category">Web Development</p>
+
+                    <h2>Academic Planner</h2>
+
+                    <p>
+                        A student planner concept for organizing
+                        academic tasks, managing study activities
+                        and keeping track of assignments.
+                    </p>
+
+                    <a href="planner.html" class="project-link">
+                        View Planner &rarr;
+                    </a>
+                    <!-- Uses the same planner page as a demonstration. -->
+                </div>
+            </article>
+
+        </section>
+
+        <!-- LINK TO THE NEXT PAGE -->
+        <section class="projects-action">
+            <h2>Want to get in touch?</h2>
+
+            <p>
+                Visit my contact page to send me a message.
+            </p>
+
+            <a href="contact.html" class="btn btn-primary">
+                Contact Me
+            </a>
+            <!-- Opens the Contact page. -->
+        </section>
+
+    </main>
+
+    <!-- WEBSITE FOOTER -->
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2026 Your Name. All rights reserved.</p>
+            <!-- Replace Your Name with your own name. -->
+        </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+    <!-- Loads the shared JavaScript file. -->
+</body>
+</html>
